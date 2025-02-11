@@ -1,1 +1,39 @@
-/__pycache__
+# Ignore virtual environment folder
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore instance folder (often used for application-specific configurations)
+instance/
+
+# Ignore IDE and editor-specific files (add more if needed)
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore environment files (if applicable)
+.env
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+
+# Ignore pytest and other test tools' output
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Ignore packaging files
+*.egg
+*.egg-info/
+dist/
+build/
+
