@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratitude Journal</title>
+</head>
+<body>
+    <h1>Welcome, {{ current_user.username }}!</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <h2>Log Your Gratitude</h2>
+    <form method="POST">
+        <textarea name="content" placeholder="What are you grateful for today?" required></textarea><br><br>
+        <input type="text" name="mood" placeholder="How are you feeling?" required><br><br>
+        <input type="date" name="date" required><br><br>
+        <button type="submit">Save Entry</button>
+    </form>
+
+    <h3>Your Previous Entries:</h3>
+    <ul>
+        {% for entry in entries %}
+            <li>{{ entry.date }} - Mood: {{ entry.mood }} - {{ entry.content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
