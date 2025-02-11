@@ -10,7 +10,7 @@ from threading import Timer
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///journal.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['SECRET_KEY'] = 'Loveispain1!'
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
